@@ -20,12 +20,14 @@ class ViewController: UIViewController {
         iv.frame.size = CGSize(width: 150, height: 150)
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.tintColor = .black
         return iv
     }()
 
     let button: UIButton = {
         let btn = UIButton()
         btn.setTitle("Download Image", for: .normal)
+        btn.titleLabel?.font = .boldSystemFont(ofSize: 20)
         btn.frame.size = CGSize(width: 100, height: 50)
         btn.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         btn.layer.cornerRadius = 20
@@ -61,12 +63,10 @@ class ViewController: UIViewController {
 
     @objc private func fetchImage() {
         let url = URL(string: urlString)
-        let processor = DownsamplingImageProcessor(size: imageView.bounds.size) >> RoundCornerImageProcessor(cornerRadius: 20)
         imageView.kf.indicatorType = .activity
         imageView.kf.setImage(with: url,
-            placeholder: UIImage(systemName: "placeholdertext.fill"),
+            placeholder: UIImage(systemName: "applelogo"),
             options: [
-                    .processor(processor),
                     .scaleFactor(UIScreen.main.scale),
                     .transition(.flipFromTop(3))
             ])
