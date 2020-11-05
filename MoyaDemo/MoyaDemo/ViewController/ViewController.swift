@@ -80,7 +80,6 @@ class ViewController: UIViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
-            
         }
     }
     
