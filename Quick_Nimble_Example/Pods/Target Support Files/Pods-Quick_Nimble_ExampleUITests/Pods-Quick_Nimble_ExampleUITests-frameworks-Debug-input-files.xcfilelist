@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-Quick_Nimble_ExampleUITests/Pods-Quick_Nimble_ExampleUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework
+${BUILT_PRODUCTS_DIR}/Quick/Quick.framework

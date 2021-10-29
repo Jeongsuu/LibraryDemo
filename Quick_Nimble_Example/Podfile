@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+  platform :ios, '9.0'
+
+def for_test
+    pod 'Quick'
+    pod 'Nimble'
+end
+
+  target 'Quick_Nimble_Example' do
+    use_frameworks!
+
+  # Pods for Quick_Nimble_Example
+
+  target 'Quick_Nimble_ExampleTests' do
+    inherit! :search_paths
+    for_test
+  end
+
+  target 'Quick_Nimble_ExampleUITests' do
+    inherit! :search_paths
+  end
+end
